@@ -1,0 +1,31 @@
+.card {
+    flex: 1 0 25%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cardbox{
+    list-style: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 20%;
+    height: 100%;
+    min-width: 85%;
+}
+
+.movieTitle {
+    font-size: 1rem;
+    margin: 20px;
+}
+
+.movieImg {
+    width: 60%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.movieDescription {
+    margin: 4%;
+    font-size: 0.7rem;
+    padding-bottom: 50px;
+}
