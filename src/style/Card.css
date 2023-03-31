@@ -9,7 +9,7 @@
     border: 2px solid black;
     border-radius: 10px;
     width: 20%;
-    height: 100%;
+    min-height: 530px;
     min-width: 85%;
 }
 
@@ -19,13 +19,20 @@
 }
 
 .movieImg {
-    width: 60%;
-    height: 50%;
+    width: 70%;
+    height: 60%;
     border-radius: 10px;
 }
 
 .movieDescription {
     margin: 4%;
     font-size: 0.7rem;
-    padding-bottom: 50px;
+}
+
+.addtofav {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }

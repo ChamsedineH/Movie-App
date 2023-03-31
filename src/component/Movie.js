@@ -6,6 +6,7 @@ import "../style/Movie.css";
 const Movie = (props) => {
   const [movieData, setMovieData] = useState([]);
   const [search, setSearch] = useState("");
+  const [favorites, setFavorites] = useState([]);
   const [inputOpacity, setInputOpacity] = useState(0);
   const [btnOpacity, setBtnOpacity] = useState(1);
   const sortByRating = () => {
@@ -38,6 +39,15 @@ const Movie = (props) => {
     }
   }, [search]);
 
+  useEffect(() => {
+    const storedFavorites = JSON.parse(localStorage.getItem("favorites"));
+    if (storedFavorites) {
+      setFavorites(storedFavorites);
+    }
+  }, []);
+  
+
+
   return (
     <div>
       <span className="spansearch">
@@ -69,7 +79,7 @@ const Movie = (props) => {
       </span>
       <ul className="movielist">
         {movieData.map((movie, index) => {
-          return <Card key={index} movie={movie} />;
+          return <Card key={index} movie={movie} favorites={favorites} />;
         })}
       </ul>
     </div>
